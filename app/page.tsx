@@ -241,12 +241,12 @@ export default function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Data Analytics & Statistics",
+                title: "Data Analytics",
                 skills: [
                   "Data Cleaning",
                   "Data Transformation",
                   "Exploratory Data Analysis",
-                  "Statistical Analysis",
+                  "Trend Analysis",
                   "Predictive Modeling",
                   "Time-Series Forecasting",
                   "Data Visualization",
@@ -257,9 +257,7 @@ export default function Home() {
                 skills: [
                   "Dashboard Development",
                   "KPI Monitoring",
-                  "Business Reporting",
-                  "Performance Analysis",
-                  "Data-Driven Decision-Making",
+                  "Business Performance Analysis",
                 ],
               },
               {
@@ -280,7 +278,7 @@ export default function Home() {
                   "SQL Querying",
                   "Data Retrieval",
                   "Data Manipulation",
-                  "Relational Databases",
+                  "Relational Database Fundamentals",
                   "Microsoft SQL Server",
                   "MySQL",
                 ],
@@ -294,20 +292,12 @@ export default function Home() {
                   "SPSS",
                   "Weka",
                   "OpenRefine",
+                  "Mircosoft Office",
+                  "Google Workspace",
                   "Visual Studio Code",
                 ],
               },
-              {
-                title: "Documentation & Collaboration",
-                skills: [
-                  "Technical Documentation",
-                  "Report Preparation",
-                  "Presentation Development",
-                  "Microsoft Office",
-                  "Google Workspace",
-                  "Digital Collaboration",
-                ],
-              },
+              
             ].map((category) => (
               <div
                 key={category.title}
