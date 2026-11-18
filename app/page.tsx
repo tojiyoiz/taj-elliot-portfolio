@@ -579,7 +579,7 @@ export default function Home() {
             {[
               {
                 title: "IT Specialist — Artificial Intelligence",
-                issuer: "Certiport",
+                issuer: "Pearson VUE",
                 date: "October 2026",
                 category: "Artificial Intelligence",
               },
