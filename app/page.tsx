@@ -96,7 +96,7 @@ const projects: Project[] = [
 
               },
               {
-                title: "Coffee Motto Sales Dashboard",
+                title: "Coffee Shop Sales Dashboard",
                 images: [
                   "/projects/coffee-motto/screenshot-1.png",
                 ], // Add paths here when your screenshots are ready
