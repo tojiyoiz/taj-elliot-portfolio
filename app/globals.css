@@ -1,19 +1,26 @@
 @import "tailwindcss";
-
-:root {
-  --background: #F8FAFC;
-  --foreground: #0F172A;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root { --background:#0B1020; --foreground:#F8FAFC; --arcade-panel:#131D35; --arcade-card:#18243D; --arcade-cyan:#22D3EE; --arcade-purple:#A78BFA; --arcade-gold:#FBBF24; --arcade-muted:#94A3B8; --arcade-border:#334155; }
+@theme inline { --color-background:var(--background); --color-foreground:var(--foreground); --font-sans:var(--font-geist-sans); --font-mono:var(--font-geist-mono); }
+html { scroll-behavior:smooth; }
+body { background:var(--background); color:var(--foreground); font-family:Arial,Helvetica,sans-serif; }
+.arcade-background { background-color:#0B1020; background-image:linear-gradient(rgba(34,211,238,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.025) 1px,transparent 1px),radial-gradient(ellipse at 70% 5%,rgba(108,72,178,.13),transparent 45%);background-size:52px 52px,52px 52px,auto; }
+.arcade-section { padding:6.5rem 1.5rem; border-top:1px solid rgba(51,65,85,.45); }
+.arcade-panel { border:1px solid rgba(71,85,105,.65); border-radius:1rem; background:linear-gradient(145deg,#17233D,#111A2D); box-shadow:0 15px 50px rgba(0,0,0,.12); }
+.arcade-gradient-text { background:linear-gradient(95deg,#22D3EE 10%,#A78BFA 65%,#FBBF24);color:transparent;background-clip:text;-webkit-background-clip:text; }
+.arcade-button-primary { display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.8rem 1.35rem;border-radius:.65rem;background:#22D3EE;color:#07121F;font-size:.8rem;font-weight:900;letter-spacing:.07em;transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 0 24px rgba(34,211,238,.16); }
+.arcade-button-primary:hover { background:#67E8F9;transform:translateY(-2px);box-shadow:0 0 30px rgba(34,211,238,.25); }
+.arcade-button-outline { display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.75rem 1.25rem;border:1px solid rgba(103,232,249,.45);border-radius:.65rem;background:rgba(34,211,238,.035);color:#CFFAFE;font-weight:800;letter-spacing:.05em;transition:background .2s,border-color .2s; }
+.arcade-button-outline:hover { background:rgba(34,211,238,.12);border-color:#22D3EE; }
+.arcade-game-card { border-color:rgba(34,211,238,.35);transition:transform .25s,border-color .25s,box-shadow .25s; }
+.arcade-game-card:hover { transform:translateY(-6px);border-color:#22D3EE;box-shadow:0 14px 45px rgba(34,211,238,.13); }
+.arcade-game-card.arcade-purple { border-color:rgba(167,139,250,.35); }
+.arcade-game-card.arcade-purple:hover { border-color:#A78BFA;box-shadow:0 14px 45px rgba(167,139,250,.14); }
+.arcade-game-card.arcade-gold { border-color:rgba(251,191,36,.35); }
+.arcade-game-card.arcade-gold:hover { border-color:#FBBF24;box-shadow:0 14px 45px rgba(251,191,36,.12); }
+.arcade-mission-button { background:#22D3EE;color:#06121D; }
+.arcade-purple .arcade-mission-button { background:#A78BFA; }
+.arcade-gold .arcade-mission-button { background:#FBBF24; }
+.arcade-mission-button:hover { filter:brightness(1.14); }
+.status-pulse { animation:arcade-pulse 2.5s infinite; }
+@keyframes arcade-pulse { 50% { opacity:.4;box-shadow:0 0 14px #34D399; } }
+@media (prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} .status-pulse {animation:none;} *,*::before,*::after {transition-duration:.01ms!important;animation-duration:.01ms!important;} }

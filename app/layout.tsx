@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 
+
 export const metadata: Metadata = {
   title: "Taj Elliot Gomez | Data Analytics & IT Portfolio",
   description:
@@ -25,9 +26,16 @@ export const metadata: Metadata = {
     "Power BI",
     "Python",
     "IT Portfolio",
+    "Analytics Arcade",
   ],
   authors: [{ name: "Taj Elliot Gomez" }],
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+  },
 };
+
 
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
